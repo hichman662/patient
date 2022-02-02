@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'tab0',
     loadChildren: () => import('./tab0/tab0.module').then( m => m.Tab0PageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   }
 ];
 @NgModule({
