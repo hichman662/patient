@@ -3,20 +3,20 @@
     <ion-toolbar>
 
         <ion-buttons slot="start">
-            <ion-back-button text="Home" defaultHref="/home" icon="chevron-back-outline"></ion-back-button>
+            <ion-back-button text="Home" defaultHref="/tab0" icon="chevron-back-outline"></ion-back-button>
         </ion-buttons>
     </ion-toolbar>
     <ion-row>
         <ion-col size="4" class="ion-align-self-start">
 
         </ion-col>
-        <ion-col size="4" class="ion-align-self-end">
+        <ion-col size="4" class="ion-align-self-center">
             <ion-card color="transparent" class="pati-card">
                 <ion-img src='assets/icon/patientN.png'></ion-img>
 
             </ion-card>
         </ion-col>
-        <ion-col size="4" class="ion-align-self-center">
+        <ion-col size="4" class="ion-align-self-end">
         </ion-col>
 
     </ion-row>
@@ -27,7 +27,7 @@
         <ion-col size="10" class="ion-align-self-center">
 
             <ion-list-header>
-                <ion-label class="text-top">Patient Section</ion-label>
+                <ion-label class="text-top mt-0">Patient Section</ion-label>
             </ion-list-header>
 
         </ion-col>
@@ -44,7 +44,7 @@
         <ion-grid>
             <ion-row>
 
-                <ion-col size="6" class="ion-align-self-center" [routerLink]="['patient']">
+                <ion-col size="6" class="ion-align-self-start" [routerLink]="['patient']">
                     <ion-card color="transparent" class="disability-card">
                         <ion-img src='assets/icon/pati.png'></ion-img>
                         <ion-label>Patient Data</ion-label>
