@@ -1,9 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
 
+    <ion-title>Twins4Disabilities LOGIN</ion-title>
+
+
+    <form id="loginform" (ngSubmit)="login()" [formGroup]="loginForm">
+        <div class="input-group">
+
+            <ion-item>
+
+                <ion-input type="email" formControlName="Email" placeholder="Email" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-input type="password" formControlName="Pass" placeholder="Password" required></ion-input>
+            </ion-item>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="text-danger" *ngIf="!campoValido('Email')">The user field is required</p>
+                <p class="text-danger" *ngIf="!campoValido('Pass')">The password field is required</p>
+            </div>
+        </div>
+        <ion-button class="btn btn-success" type="submit" [disabled]="waiting">
+            <ion-spinner name="" color="danger" *ngIf="waiting"></ion-spinner>Login</ion-button>
+
+    </form>
 </ion-content>
