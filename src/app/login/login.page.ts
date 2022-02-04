@@ -28,11 +28,12 @@ export class LoginPage implements OnInit {
 async  ngOnInit() {
    await this.storage.clear();
   }
-  /* async start() {
-    this.router.navigateByUrl('/scenarios', { replaceUrl:true });
-  } */
 
-  login(): any {
+  async start() {
+    this.router.navigateByUrl('/tabs', { replaceUrl:true });
+  }
+
+/*   login(): any {
     this.formSubmit = true;
     if (!this.loginForm.valid) {
       console.warn('error in the form');
@@ -65,7 +66,7 @@ async  ngOnInit() {
         this.waiting = false;
       });
 
-    }
+    } */
 
   campoValido(campo: string ){
     return this.loginForm.get(campo)?.valid || !this.formSubmit;

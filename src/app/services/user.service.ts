@@ -43,7 +43,7 @@ public createUser( data: UserData ): Observable<object> {
   );
 }
 
-login( formData: loginForm) {
+/* login( formData: loginForm) {
   return this.http.post(`${environment.base_url}/UserAnonimous/Login`, formData)
           .pipe(
             tap( (res: any) => {
@@ -51,9 +51,9 @@ login( formData: loginForm) {
               this.storage.set('token', res);
               })
           );
-}
+} */
 
-get headers() {
+/* get headers() {
   return {
     headers: {
       'token': this.getToken
@@ -64,7 +64,7 @@ get getToken(): string {
     this.token = val;
   });
   return this.token || '';
-}
+} */
 
 get idNewUser(): number {
   return this.newUser.Id;

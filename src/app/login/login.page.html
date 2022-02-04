@@ -1,9 +1,9 @@
 <ion-content>
 
-    <ion-title>Twins4Disabilities LOGIN</ion-title>
+    <ion-title>Twins4Disabilities</ion-title>
 
 
-    <form id="loginform" (ngSubmit)="login()" [formGroup]="loginForm">
+    <form id="loginform" [formGroup]="loginForm">
         <div class="input-group">
 
             <ion-item>
@@ -22,7 +22,7 @@
                 <p class="text-danger" *ngIf="!campoValido('Pass')">The password field is required</p>
             </div>
         </div>
-        <ion-button class="btn btn-success" type="submit" [disabled]="waiting">
+        <ion-button class="btn btn-success" (click)="start();" type="submit" [disabled]="waiting">
             <ion-spinner name="" color="danger" *ngIf="waiting"></ion-spinner>Login</ion-button>
 
     </form>
