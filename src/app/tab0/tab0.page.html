@@ -1,10 +1,53 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
     <ion-toolbar>
         <ion-menu-button slot="start" autoHide="false"></ion-menu-button>
-        <ion-title>
-            Tab 0
+        <ion-title class="text-center">
+            Notification
         </ion-title>
     </ion-toolbar>
+</ion-header> -->
+
+<!--
+  ////
+ -->
+<ion-header>
+
+    <ion-toolbar>
+
+        <ion-buttons slot="start">
+            <ion-menu-button slot="start" autoHide="false"></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-row>
+        <ion-col size="4" class="ion-align-self-start">
+
+        </ion-col>
+        <ion-col size="4" class="ion-align-self-center">
+            <ion-card color="transparent" class="pati-card">
+                <ion-img src='assets/icon/notification.png'></ion-img>
+
+            </ion-card>
+        </ion-col>
+        <ion-col size="4" class="ion-align-self-end">
+        </ion-col>
+
+    </ion-row>
+    <ion-row>
+        <ion-col size="1" class="ion-align-self-start">
+
+        </ion-col>
+        <ion-col size="10" class="ion-align-self-center">
+
+            <ion-list-header>
+                <ion-label class="text-top">Notification</ion-label>
+            </ion-list-header>
+
+        </ion-col>
+        <ion-col size="1" class="ion-align-self-end">
+
+        </ion-col>
+
+    </ion-row>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -51,4 +94,39 @@
     <ion-toolbar>
         <ion-title class="text-center mt-2" size="midium">Tomorrow-Thu Feb 10</ion-title>
     </ion-toolbar>
+    <ion-list>
+        <ion-row>
+            <ion-item>
+                <ion-col size="3">
+                    11:00 AM <br> 45 m
+                </ion-col>
+                <ion-col size="2">
+                    <ion-img src='assets/icon/appointment.png'></ion-img>
+
+                </ion-col>
+                <ion-col size="7">
+                    <ion-item><strong>Appointment</strong></ion-item>
+                    <ion-item class="h6">Alicante Hospital</ion-item>
+                    <br>
+                </ion-col>
+            </ion-item>
+        </ion-row>
+        <ion-row>
+            <ion-item>
+                <ion-col size="3">
+                    12:00 AM <br> 20 m
+                </ion-col>
+                <ion-col size="2">
+                    <ion-img src='assets/icon/nutrition.png'></ion-img>
+
+                </ion-col>
+                <ion-col size="7">
+                    <ion-item><strong>Nutrition</strong></ion-item>
+                    <ion-item class="h6">Nuts - 1 Apple</ion-item>
+                    <br>
+                </ion-col>
+            </ion-item>
+        </ion-row>
+
+    </ion-list>
 </ion-content>
