@@ -10,9 +10,45 @@
 <ion-content [fullscreen]="true">
     <ion-header collapse="condense">
         <ion-toolbar>
-            <ion-title size="large">Tab 0</ion-title>
+            <ion-title class="text-center" size="midium">Today-Wed Feb 9</ion-title>
         </ion-toolbar>
     </ion-header>
+    <ion-list>
+        <ion-row>
+            <ion-item>
+                <ion-col size="3">
+                    11:00 AM <br> 45 m
+                </ion-col>
+                <ion-col size="2">
+                    <ion-img src='assets/icon/appointment.png'></ion-img>
 
-    <app-explore-container name="Tab 0 page"></app-explore-container>
+                </ion-col>
+                <ion-col size="7">
+                    <ion-item><strong>Appointment</strong></ion-item>
+                    <ion-item class="h6">Alicante Hospital</ion-item>
+                    <br>
+                </ion-col>
+            </ion-item>
+        </ion-row>
+        <ion-row>
+            <ion-item>
+                <ion-col size="3">
+                    12:00 AM <br> 20 m
+                </ion-col>
+                <ion-col size="2">
+                    <ion-img src='assets/icon/nutrition.png'></ion-img>
+
+                </ion-col>
+                <ion-col size="7">
+                    <ion-item><strong>Nutrition</strong></ion-item>
+                    <ion-item class="h6">Nuts - 1 Apple</ion-item>
+                    <br>
+                </ion-col>
+            </ion-item>
+        </ion-row>
+
+    </ion-list>
+    <ion-toolbar>
+        <ion-title class="text-center mt-2" size="midium">Tomorrow-Thu Feb 10</ion-title>
+    </ion-toolbar>
 </ion-content>
