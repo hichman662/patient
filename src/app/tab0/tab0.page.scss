@@ -24,7 +24,7 @@ ion-title {
     max-width: 100%;
     max-height: auto;
     text-align: center;
-    background-color: rgba(219, 125, 96, 0.938);
+    background-color: rgba(192, 219, 96, 0.938);
     margin-top: 2px;
     margin-left: 3px;
     margin-bottom: 6px;
@@ -68,6 +68,21 @@ ion-label {
     height: 90%;
 }
 
+.bottomRow {
+    margin-top: -30px;
+}
+
+.topRow {
+    margin-top: -20px;
+}
+
+ion-toggle {
+    width: 55px;
+    height: 20px;
+    margin-left: 1px;
+    --background: rgb(238, 207, 207);
+}
+
 
 /* DOES NOT WORK - not specific enough */
 
@@ -79,6 +94,10 @@ ion-card {
 }
 
 ion-toolbar {
+    --background: rgba(192, 219, 96, 0.938);
+}
+
+#mainToolbar {
     --background: rgba(219, 125, 96, 0.938) !important;
 }
 
