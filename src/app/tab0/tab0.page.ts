@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab0.page.scss'],
 })
 export class Tab0Page implements OnInit {
-
+  textByValue = false;
   constructor() { }
 
   ngOnInit() {

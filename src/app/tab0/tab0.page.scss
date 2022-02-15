@@ -77,10 +77,42 @@ ion-label {
 }
 
 ion-toggle {
-    width: 55px;
-    height: 20px;
-    margin-left: 1px;
+    width: 80px;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 0px;
     --background: rgb(238, 207, 207);
+}
+
+ion-toggle[aria-checked="false"] {
+    width: 85px;
+    &::before {
+        position: absolute;
+        content: "READ";
+        font-size: 10px;
+        line-height: 31px;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+    }
+}
+
+ion-toggle[aria-checked="true"] {
+    width: 85px;
+    &::before {
+        position: absolute;
+        content: "";
+    }
+    &::after {
+        position: absolute;
+        content: "UNREAD";
+        font-size: 10px;
+        line-height: 31px;
+        top: 0;
+        left: 3px;
+        color: #fff;
+    }
 }
 
 
