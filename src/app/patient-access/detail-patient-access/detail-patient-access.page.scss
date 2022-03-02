@@ -7,20 +7,6 @@
     color: green;
 }
 
-.ionadd {
-    margin-right: 20px;
-    margin-top: 10px;
-}
-
-.bottomRow {
-    margin-top: -1px;
-    margin-left: -30px;
-}
-
-.topRow {
-    margin-top: -2px;
-}
-
 ion-card {
     box-shadow: none !important
 }
@@ -63,11 +49,6 @@ ion-loading {
     color: green;
 }
 
-.password,
-.phone {
-    color: blue
-}
-
 .iconText>ion-col>ion-icon {
     margin-left: 25px;
 }
@@ -84,8 +65,7 @@ ion-loading {
 }
 
 ion-list-header {
-    margin-bottom: 1px;
-    font-size: 14px;
+    margin-bottom: -9px;
 }
 
 app-component-telemetry {

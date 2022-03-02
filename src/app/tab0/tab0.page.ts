@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab0Page implements OnInit {
   textByValue = false;
+
+
   constructor() { }
 
   ngOnInit() {

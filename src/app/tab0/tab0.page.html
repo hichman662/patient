@@ -62,19 +62,21 @@
                 <ion-col size="3">
                     11:00 AM <br> 45 m
                     <br>
-
-                    <ion-toggle class="" toggle-class="toggle-assertive" color="danger"> </ion-toggle>
-
                 </ion-col>
                 <ion-col size="2">
                     <ion-img src='assets/icon/appointment.png'></ion-img>
                     <br>
-
-
                 </ion-col>
                 <ion-col size="7">
+
                     <ion-item><strong>Appointment</strong></ion-item>
                     <ion-item class="h6">Alicante Hospital</ion-item>
+                    <ion-select class="align-left">
+                        <ion-select-option value="u">UnRead</ion-select-option>
+                        <ion-select-option value="r">Read</ion-select-option>
+
+                    </ion-select>
+                    <!-- <ion-toggle class="" toggle-class="toggle-assertive" color="danger"> </ion-toggle>-->
 
                 </ion-col>
             </ion-item>
@@ -83,8 +85,7 @@
             <ion-item>
                 <ion-col size="3">
                     12:00 AM <br> 20 m
-                    <br>
-                    <ion-toggle class="" toggle-class="toggle-assertive" color="danger"> </ion-toggle>
+
                 </ion-col>
                 <ion-col size="2">
                     <ion-img src='assets/icon/nutrition.png'></ion-img>
@@ -93,6 +94,12 @@
                 <ion-col size="7">
                     <ion-item><strong>Nutrition</strong></ion-item>
                     <ion-item class="h6">Nuts - 1 Apple</ion-item>
+                    <ion-select class="w-100">
+                        <ion-select-option value="u">UnRead</ion-select-option>
+                        <ion-select-option value="r">Read</ion-select-option>
+
+                    </ion-select>
+                    <!--<ion-toggle class="" toggle-class="toggle-assertive" color="danger"> </ion-toggle>-->
                 </ion-col>
             </ion-item>
         </ion-row>
@@ -106,8 +113,7 @@
             <ion-item>
                 <ion-col size="3">
                     11:00 AM <br> 45 m
-                    <br>
-                    <ion-toggle class="" toggle-class="toggle-assertive" color="danger"> </ion-toggle>
+
                 </ion-col>
                 <ion-col size="2">
                     <ion-img src='assets/icon/appointment.png'></ion-img>
@@ -115,7 +121,7 @@
                 <ion-col size="7">
                     <ion-item><strong>Appointment</strong></ion-item>
                     <ion-item class="h6">Alicante Hospital</ion-item>
-                    <br>
+
                 </ion-col>
             </ion-item>
         </ion-row>
@@ -124,7 +130,7 @@
                 <ion-col size="3">
                     12:00 AM <br> 20 m
                     <br>
-                    <ion-toggle class="" toggle-class="toggle-assertive" color="danger"> </ion-toggle>
+
                 </ion-col>
                 <ion-col size="2">
                     <ion-img src='assets/icon/nutrition.png'></ion-img>
@@ -133,10 +139,9 @@
                 <ion-col size="7">
                     <ion-item><strong>Nutrition</strong></ion-item>
                     <ion-item class="h6">Nuts - 1 Apple</ion-item>
-                    <br>
+
                 </ion-col>
             </ion-item>
         </ion-row>
-
     </ion-list>
 </ion-content>

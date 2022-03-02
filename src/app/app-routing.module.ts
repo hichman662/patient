@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
+  {
+    path: 'patient-access',
+    loadChildren: () => import('./patient-access/patient-access.module').then( m => m.PatientAccessPageModule)
+  },
 
 ];
 @NgModule({

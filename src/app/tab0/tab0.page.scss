@@ -77,24 +77,27 @@ ion-label {
 }
 
 ion-toggle {
-    width: 80px;
+    width: 60px;
     height: 30px;
     margin-top: 5px;
-    margin-left: 0px;
+    margin-left: 50px;
     --background: rgb(238, 207, 207);
 }
 
 ion-toggle[aria-checked="false"] {
     width: 85px;
     &::before {
-        position: absolute;
-        content: "READ";
-        font-size: 10px;
-        line-height: 31px;
+        top: 12px;
+        left: 50px;
     }
     &::after {
         position: absolute;
-        content: "";
+        content: "Complete";
+        font-size: 10px;
+        line-height: 31px;
+        top: 12px;
+        left: 50px;
+        color: black
     }
 }
 
@@ -106,11 +109,11 @@ ion-toggle[aria-checked="true"] {
     }
     &::after {
         position: absolute;
-        content: "UNREAD";
+        content: "Descard";
         font-size: 10px;
-        line-height: 31px;
-        top: 0;
-        left: 3px;
+        line-height: 32px;
+        top: 12px;
+        left: 25px;
         color: #fff;
     }
 }
@@ -190,4 +193,8 @@ ion-segment-button {
 
 .my-custom-menu {
     --width: 500px;
+}
+
+ion-select {
+    --width: 500%;
 }
