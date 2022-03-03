@@ -26,6 +26,18 @@ const routes: Routes = [
     path: 'rel-person',
     loadChildren: () => import('./rel-person/rel-person.module').then( m => m.RelPersonPageModule)
   },
+  {
+    path: 'care-plan',
+    loadChildren: () => import('./care-plan/care-plan.module').then( m => m.CarePlanPageModule)
+  },
+  {
+    path: 'care-activity',
+    loadChildren: () => import('./care-activity/care-activity.module').then( m => m.CareActivityPageModule)
+  },
+  {
+    path: 'vital-sign',
+    loadChildren: () => import('./vital-sign/vital-sign.module').then( m => m.VitalSignPageModule)
+  },
 
 ];
 @NgModule({

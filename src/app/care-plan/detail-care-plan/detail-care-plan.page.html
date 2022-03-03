@@ -1,0 +1,267 @@
+<ion-header>
+
+    <ion-toolbar>
+
+        <ion-buttons slot="start">
+            <ion-back-button text="Care plans" defaultHref="tabs/tab2/carePlan" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button>
+            </ion-button>
+        </ion-buttons>
+
+    </ion-toolbar>
+    <ion-row>
+        <ion-col size="4" class="ion-align-self-start">
+
+        </ion-col>
+        <ion-col size="4" class="ion-align-self-center">
+            <ion-card color="transparent" class="deviceTemplate-card">
+                <ion-img src='assets/icon/carePlansW.png'></ion-img>
+
+            </ion-card>
+        </ion-col>
+        <ion-col size="4" class="ion-align-self-end">
+        </ion-col>
+
+    </ion-row>
+    <ion-row>
+        <ion-col size="1" class="ion-align-self-start">
+
+        </ion-col>
+        <ion-col size="10" class="ion-align-self-center">
+
+            <ion-list-header>
+                <ion-label class="text-top">{{ carePlanName}}</ion-label>
+
+            </ion-list-header>
+
+        </ion-col>
+        <ion-col size="1" class="ion-align-self-end">
+
+        </ion-col>
+
+    </ion-row>
+    <ion-row>
+        <ion-col size="1" class="ion-align-self-start">
+
+        </ion-col>
+        <ion-col size="10" class="ion-align-self-center">
+
+            <ion-list-header>
+
+                <ion-label class="text-top">
+                    <h4>{{ carePlanDescription}}</h4>
+                </ion-label>
+            </ion-list-header>
+
+        </ion-col>
+        <ion-col size="1" class="ion-align-self-end">
+
+        </ion-col>
+
+    </ion-row>
+    <ion-segment [hidden]="carePlanDetailNull" value="all" color="tertiary" class="animate__animated animate__slideInUp animate__fast" scrollable="true" mode="md" [(ngModel)]="segmentModel" lines="none">
+        <ion-segment-button value="details">
+            <ion-icon name="receipt-outline"></ion-icon>
+            <ion-label>Detail</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="goals">
+            <ion-icon name="trophy-outline"></ion-icon>
+            <ion-label>Goals</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="targets">
+            <ion-icon name="locate-outline"></ion-icon>
+            <ion-label>Targets</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+<ion-content>
+    <div class="segment" *ngIf="segmentModel === 'details'" [hidden]="carePlanDetailNull">
+        <ion-list>
+            <ion-list-header>
+                <ion-icon class="segmentIcon" name="clipboard-outline"></ion-icon>Name</ion-list-header>
+            <ion-item>
+                <ion-label text-wrap> Nombre</ion-label>
+                <!-- <ion-label text-wrap> {{$any(carePlanTemplate)?.Name}}</ion-label> -->
+            </ion-item>
+            <ion-list-header>
+                <ion-icon class="segmentIcon" name="document-text-outline"></ion-icon>Description</ion-list-header>
+            <ion-item>
+                <ion-label text-wrap> Description</ion-label>
+                <!-- <ion-label text-wrap> {{$any(carePlanTemplate)?.Description}}</ion-label> -->
+            </ion-item>
+            <ion-list-header>
+                <ion-icon class="segmentIcon" name="reader-outline"></ion-icon>Title</ion-list-header>
+            <ion-item>
+                <ion-label text-wrap> Title</ion-label>
+                <!-- <ion-label text-wrap> {{$any(carePlanTemplate)?.Title}}</ion-label> -->
+            </ion-item>
+            <ion-list-header>
+                <ion-icon class="segmentIcon" name="bookmark-outline"></ion-icon>Modified</ion-list-header>
+            <ion-item>
+                <ion-label text-wrap>Fecha de hoy</ion-label>
+                <!-- <ion-label text-wrap> {{$any(carePlanTemplate)?.Modified |date}}</ion-label> -->
+            </ion-item>
+            <ion-list-header>
+                <ion-icon class="segmentIcon" name="calendar-number-outline"></ion-icon>Duration Days</ion-list-header>
+            <ion-item>
+                <ion-label text-wrap> 221</ion-label>
+                <!-- <ion-label text-wrap> {{$any(carePlanTemplate)?.DurationDays}}</ion-label> -->
+            </ion-item>
+            <ion-list-header>
+                <ion-icon class="segmentIcon" name="shuffle-outline"></ion-icon>Intent</ion-list-header>
+            <ion-item>
+                <ion-label> Proposal</ion-label>
+                <!-- <ion-label *ngIf="$any(carePlanTemplate)?.Intent === 1"> Proposal</ion-label>
+              <ion-label *ngIf="$any(carePlanTemplate)?.Intent === 2"> Plan</ion-label>
+              <ion-label *ngIf="$any(carePlanTemplate)?.Intent === 3"> Order</ion-label>
+              <ion-label *ngIf="$any(carePlanTemplate)?.Intent === 4"> Option</ion-label> -->
+            </ion-item>
+
+
+            <ion-list-header>
+                <ion-icon class="segmentIcon" name="toggle-outline"></ion-icon>Status</ion-list-header>
+            <ion-item>
+                <ion-label> Draft</ion-label>
+                <!--
+              <ion-label *ngIf="$any(carePlanTemplate)?.Status === 1"> Draft</ion-label>
+              <ion-label *ngIf="$any(carePlanTemplate)?.Status === 2"> Active</ion-label>
+              <ion-label *ngIf="$any(carePlanTemplate)?.Status === 3"> On Hold</ion-label>
+              <ion-label *ngIf="$any(carePlanTemplate)?.Status === 4"> Revoked</ion-label>
+              <ion-label *ngIf="$any(carePlanTemplate)?.Status === 5"> Completed</ion-label>
+              <ion-label *ngIf="$any(carePlanTemplate)?.Status === 6"> Canceled</ion-label> -->
+            </ion-item>
+
+
+        </ion-list>
+    </div>
+    <div class="segment" *ngIf="segmentModel === 'goals'">
+        <!-- <div class="container" *ngFor="let goal of goals|keyvalue"> -->
+        <div class="container">
+            <mat-expansion-panel details>
+                <mat-expansion-panel-header slot="start">
+                    <mat-panel-title>
+                        <ion-item>
+                            <ion-icon class="segmentIcon" name="list-circle-outline"></ion-icon>
+                            <ion-label>GoalValue</ion-label>
+                            <!-- <ion-label>{{goal.value['Name']}}</ion-label> -->
+                        </ion-item>
+                    </mat-panel-title>
+
+                </mat-expansion-panel-header>
+
+                <ion-item-sliding>
+                    <ion-item-options side="start">
+                        <ion-item-option color="danger" (click)="null" expandable>
+                            <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+                        </ion-item-option>
+                    </ion-item-options>
+                </ion-item-sliding>
+
+                <ion-card>
+                    <ion-item>
+
+                        <ion-label text-wrap>Description</ion-label>
+                        <!-- <ion-badge text-wrap> {{goal.value['Description']}}</ion-badge> -->
+                        <ion-badge text-wrap>Goal descrption</ion-badge>
+                    </ion-item>
+                    <ion-item>
+
+                        <ion-label>Priority</ion-label>
+                        <ion-badge> Medium</ion-badge>
+                        <!-- <ion-badge *ngIf="$any(goal).value.Priority === 1"> High</ion-badge>
+                        <ion-badge *ngIf="$any(goal).value.Priority === 2"> Medium</ion-badge>
+                        <ion-badge *ngIf="$any(goal).value.Priority === 3"> Low</ion-badge> -->
+                    </ion-item>
+                    <ion-item>
+
+                        <ion-label>Status</ion-label>
+                        <ion-badge> Draft</ion-badge>
+                        <!-- <ion-badge *ngIf="$any(goal).value.Status === 1"> Draft</ion-badge>
+                        <ion-badge *ngIf="$any(goal).value.Status === 2"> Active</ion-badge>
+                        <ion-badge *ngIf="$any(goal).value.Status === 3"> On Hold</ion-badge>
+                        <ion-badge *ngIf="$any(goal).value.Status === 4"> Revoked</ion-badge>
+                        <ion-badge *ngIf="$any(goal).value.Status === 5"> Completed</ion-badge>
+                        <ion-badge *ngIf="$any(goal).value.Status === 6"> Canceled</ion-badge> -->
+                    </ion-item>
+                    <ion-item>
+
+                        <ion-label>Category</ion-label>
+                        <ion-badge> Dietary</ion-badge>
+                        <!-- <ion-badge *ngIf="$any(goal).value.Category === 1"> Dietary</ion-badge>
+                        <ion-badge *ngIf="$any(goal).value.Category === 2"> Safety</ion-badge>
+                        <ion-badge *ngIf="$any(goal).value.Category === 3"> Behavioral</ion-badge>
+                        <ion-badge *ngIf="$any(goal).value.Category === 4"> Physiotherapy</ion-badge> -->
+
+                    </ion-item>
+                    <ion-item>
+
+                        <ion-label>Outcome Code</ion-label>
+                        <ion-badge>Goal value outcome</ion-badge>
+                        <!-- <ion-badge> {{goal.value['OutcomeCode']}}</ion-badge> -->
+
+
+                    </ion-item>
+
+                </ion-card>
+
+            </mat-expansion-panel>
+
+
+
+        </div>
+
+    </div>
+    <div class="segment" *ngIf="segmentModel === 'targets'">
+        <!-- <div class="container" *ngFor="let target of targets|keyvalue"> -->
+        <div class="container">
+            <mat-expansion-panel details>
+                <mat-expansion-panel-header slot="start">
+                    <mat-panel-title>
+                        <ion-item>
+                            <ion-icon class="segmentIcon" name="list-circle-outline"></ion-icon>
+                            <!-- <ion-label>{{target.value['Description']}}</ion-label> -->
+                            <ion-label>Description</ion-label>
+                        </ion-item>
+                    </mat-panel-title>
+
+                </mat-expansion-panel-header>
+
+                <ion-item-sliding>
+                    <ion-item-options side="start">
+                        <ion-item-option color="danger" (click)="null" expandable>
+                            <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+                        </ion-item-option>
+                    </ion-item-options>
+                </ion-item-sliding>
+
+                <ion-card>
+                    <ion-item>
+
+                        <ion-label text-wrap>DesiredValue</ion-label>
+                        <!-- <ion-badge text-wrap> {{target.value['DesiredValue']}}</ion-badge> -->
+                        <ion-badge text-wrap> target value</ion-badge>
+                    </ion-item>
+
+                    <ion-item>
+
+                        <ion-label>Due Date</ion-label>
+
+                        <!-- <ion-badge> {{target.value['DueDate'] | date}}</ion-badge> -->
+                        <ion-badge> Target value date</ion-badge>
+
+
+                    </ion-item>
+
+                </ion-card>
+
+            </mat-expansion-panel>
+
+
+
+        </div>
+
+    </div>
+
+</ion-content>

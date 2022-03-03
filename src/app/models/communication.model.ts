@@ -1,13 +1,10 @@
-/* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable @typescript-eslint/naming-convention */
-
-export class Goal {
+export class Communication {
   constructor(
     Id: number,
     Name?: string,
     Description?: string,
-
-    LOINCcode?: string
+    ValueCommunication?: any
         )
   {}
 }
