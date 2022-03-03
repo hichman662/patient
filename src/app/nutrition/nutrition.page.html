@@ -1,9 +1,161 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>nutrition</ion-title>
-  </ion-toolbar>
-</ion-header>
 
+    <ion-toolbar>
+
+        <ion-buttons slot="start">
+            <ion-back-button text="Care Activities" defaultHref="tabs/tab2/careActivity" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button>
+            </ion-button>
+        </ion-buttons>
+
+    </ion-toolbar>
+    <ion-row>
+        <ion-col size="4" class="ion-align-self-start">
+
+        </ion-col>
+        <ion-col size="4" class="ion-align-self-center">
+            <ion-card color="transparent" class="deviceTemplate-card">
+                <ion-img src='assets/icon/nutritionW.png'></ion-img>
+
+            </ion-card>
+        </ion-col>
+        <ion-col size="4" class="ion-align-self-end">
+        </ion-col>
+
+    </ion-row>
+    <ion-row>
+        <ion-col size="1" class="ion-align-self-start">
+
+        </ion-col>
+        <ion-col size="10" class="ion-align-self-center">
+
+            <ion-list-header>
+                <!-- <ion-label class="text-top">{{ nutritionName}}</ion-label> -->
+                <ion-label class="text-top">nutritionName</ion-label>
+
+            </ion-list-header>
+
+        </ion-col>
+        <ion-col size="1" class="ion-align-self-end">
+
+        </ion-col>
+
+    </ion-row>
+    <ion-row>
+        <ion-col size="1" class="ion-align-self-start">
+
+        </ion-col>
+        <ion-col size="10" class="ion-align-self-center">
+
+            <ion-list-header>
+
+                <ion-label class="text-top">
+                    <!-- <h4>{{ nutritionDescrip}}</h4> -->
+                    <h4>nutrition Descrip</h4>
+                </ion-label>
+            </ion-list-header>
+
+        </ion-col>
+        <ion-col size="1" class="ion-align-self-end">
+
+        </ion-col>
+
+    </ion-row>
+    <ion-segment value="all" color="tertiary" class="animate__animated animate__slideInUp animate__fast" scrollable="true" mode="md" [(ngModel)]="segmentModel" lines="none">
+        <ion-segment-button value="nutrition">
+            <ion-icon name="restaurant-outline"></ion-icon>
+            <ion-label>Nutrition Detail</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="details">
+            <ion-icon name="receipt-outline"></ion-icon>
+            <ion-label>Activity Detail</ion-label>
+        </ion-segment-button>
+
+
+    </ion-segment>
+</ion-header>
 <ion-content>
+
+
+
+    <div class="segment" *ngIf="segmentModel === 'nutrition'">
+
+        <ion-list>
+            <ion-list-header>
+                <ion-icon class="segmentIcon" name="document-outline"></ion-icon>Name</ion-list-header>
+            <ion-item>
+
+                <!-- <ion-label> {{$any(nutritionDetail)?.Name}}</ion-label> -->
+                <ion-label>Name</ion-label>
+
+            </ion-item>
+            <ion-list-header>
+                <ion-icon class="segmentIcon" name="create-outline"></ion-icon>Description</ion-list-header>
+            <ion-item>
+
+                <!-- <ion-label> {{$any(nutritionDetail)?.Description}}</ion-label> -->
+                <ion-label> Description</ion-label>
+
+            </ion-item>
+
+            <ion-list-header>
+                <ion-icon class="segmentIcon" name="barcode-outline"></ion-icon>Diet Code</ion-list-header>
+            <ion-item>
+                <ion-label> DietCode</ion-label>
+                <!-- <ion-label> {{$any(nutritionDetail)?.DietCode}}</ion-label> -->
+
+            </ion-item>
+
+
+        </ion-list>
+    </div>
+    <div class="segment" *ngIf="segmentModel === 'details'">
+        <ion-list>
+            <ion-list-header>
+                <ion-icon class="segmentIcon" name="timer-outline"></ion-icon>Periodicity</ion-list-header>
+            <ion-item>
+                <ion-label> Daily</ion-label>
+                <!-- <ion-label *ngIf="$any(valueCareActivity)?.Periodicity === 1"> Daily</ion-label>
+              <ion-label *ngIf="$any(valueCareActivity)?.Periodicity === 2"> Monthly</ion-label>
+              <ion-label *ngIf="$any(valueCareActivity)?.Periodicity === 3"> Per Hour</ion-label>
+              <ion-label *ngIf="$any(valueCareActivity)?.Periodicity === 4"> Weekly</ion-label> -->
+            </ion-item>
+            <ion-list-header>
+                <ion-icon class="segmentIcon" name="alarm-outline"></ion-icon>Duration</ion-list-header>
+            <ion-item>
+
+                <!-- <ion-label> {{$any(valueCareActivity)?.Duration}}</ion-label> -->
+                <ion-label>Duration</ion-label>
+
+            </ion-item>
+            <ion-list-header>
+                <ion-icon class="segmentIcon" name="pin-outline"></ion-icon>Location</ion-list-header>
+            <ion-item>
+
+                <!-- <ion-label> {{$any(valueCareActivity)?.Location}}</ion-label> -->
+                <ion-label> Location</ion-label>
+
+            </ion-item>
+            <ion-list-header>
+                <ion-icon class="segmentIcon" name="code-outline"></ion-icon>Outcome Code</ion-list-header>
+            <ion-item>
+
+                <!-- <ion-label> {{$any(valueCareActivity)?.OutcomeCode}}</ion-label> -->
+                <ion-label>OutcomeCode</ion-label>
+
+            </ion-item>
+            <ion-list-header>
+                <ion-icon class="segmentIcon" name="code-working-outline"></ion-icon>Activity Code</ion-list-header>
+            <ion-item>
+
+                <!-- <ion-label> {{$any(valueCareActivity)?.ActivityCode}}</ion-label> -->
+                <ion-label>ActivityCode</ion-label>
+
+            </ion-item>
+        </ion-list>
+    </div>
+
 
 </ion-content>
