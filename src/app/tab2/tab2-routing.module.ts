@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'careActivity',
     loadChildren: () => import('../care-activity/care-activity.module').then( m => m.CareActivityPageModule)
   },
+  {
+    path: 'messenger',
+    loadChildren: () => import('../messenger/messenger.module').then( m => m.MessengerPageModule)
+  },
 ];
 
 @NgModule({
