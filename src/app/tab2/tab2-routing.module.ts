@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'messenger',
     loadChildren: () => import('../messenger/messenger.module').then( m => m.MessengerPageModule)
   },
+  {
+    path: 'chat',
+    loadChildren: () => import('../chat/chat.module').then( m => m.ChatPageModule)
+  },
 ];
 
 @NgModule({
