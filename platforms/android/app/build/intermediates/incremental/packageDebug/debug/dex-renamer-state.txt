@@ -1,0 +1,4 @@
+#Wed May 04 14:05:26 CEST 2022
+base.0=C\:\\Users\\hichm\\Desktop\\patient\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

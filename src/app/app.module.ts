@@ -1,3 +1,5 @@
+import { SpeechRecognition } from '@awesome-cordova-plugins/speech-recognition/ngx';
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -22,7 +24,7 @@ import { ChatService } from './services/chat.service';
      IonicStorageModule.forRoot(),
      BrowserAnimationsModule,
     ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [SpeechRecognition,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
